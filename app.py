@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-import pip
-pip.main(['install', 'requests'])
-pip.main(['install', 'scipy'])
+# import pip
+# pip.main(['install', 'requests'])
+# pip.main(['install', 'scipy'])
 
 import requests
 from requests.compat import urljoin
@@ -43,7 +43,7 @@ def main():
     print("Ready to talk!")
 
     host = socket.gethostname()
-    port = 8080
+    port = 3979
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.bind((host, port))
