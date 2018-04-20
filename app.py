@@ -49,6 +49,8 @@ def main():
     sock.bind((host, port))
     sock.listen(1)
 
+    print('host: ', host)
+
     def before(value, a):
         # Find first part and return slice before it.
         pos_a = value.find(a)
