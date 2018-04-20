@@ -43,7 +43,7 @@ def main():
     print("Ready to talk!")
 
     host = '127.0.0.1'
-    port = 3979
+    port = 8080
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.bind((host, port))
