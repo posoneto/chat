@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-# import pip
-# pip.main(['install', 'requests'])
-# pip.main(['install', 'scipy'])
+import pip
+pip.main(['install', 'requests'])
+pip.main(['install', 'scipy'])
 
 import requests
 from requests.compat import urljoin
