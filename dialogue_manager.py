@@ -1,5 +1,7 @@
 import os
 
+import pip
+
 pip.main(['install', 'sklearn'])
 pip.main(['install', 'chatterbot'])
 
