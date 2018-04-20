@@ -41,10 +41,10 @@ def main():
     print('\nCreating and Training Chatbot, this will take about 4 minutes, please wait...\n')
     dialogue_manager.create_chitchat_bot()
     print("Ready to talk!")
-	
-	host = socket.gethostname() # Get local machine name
-	port = 8080
-	
+
+    host = socket.gethostname()
+    port = 8080
+
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.bind((host, port))
     sock.listen(1)
