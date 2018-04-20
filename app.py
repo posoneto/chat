@@ -43,7 +43,7 @@ def main():
     print("Ready to talk!")
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.bind(('localhost', 3979))
+    sock.bind(('http://chat-chat.1d35.starter-us-east-1.openshiftapps.com', 8080))
     sock.listen(1)
 
     def before(value, a):
