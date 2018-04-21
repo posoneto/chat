@@ -1,11 +1,11 @@
 import os
 
-# import pip
+import pip
 
-# pip.main(['install', 'sklearn'])
-# pip.main(['install', 'chatterbot'])
-# pip.main(['install', 'numpy'])
-# pip.main(['install', 'scipy'])
+pip.main(['install', 'sklearn'])
+pip.main(['install', 'chatterbot'])
+pip.main(['install', 'numpy'])
+pip.main(['install', 'scipy'])
 
 from sklearn.metrics.pairwise import pairwise_distances_argmin
 
