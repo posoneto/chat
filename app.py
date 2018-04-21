@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-import pip
-pip.main(['install', 'requests'])
-pip.main(['install', 'scipy'])
+# import pip
+# pip.main(['install', 'requests'])
+# pip.main(['install', 'scipy'])
 
 import requests
 from requests.compat import urljoin
@@ -144,13 +144,13 @@ def main():
 
         c.close()
 
-    while True:
-        c, a = sock.accept()
-        cThread = threading.Thread(target=handler, args=(c, a, bot))
-        cThread.daemon = True
-        cThread.start()
-        print('connection: ', c)
-        print('argument: ', a)
+    # while True:
+    #     c, a = sock.accept()
+    #     cThread = threading.Thread(target=handler, args=(c, a, bot))
+    #     cThread.daemon = True
+    #     cThread.start()
+    #     print('connection: ', c)
+    #     print('argument: ', a)
 
 
 if __name__ == "__main__":
