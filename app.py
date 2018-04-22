@@ -147,6 +147,7 @@ def main():
 
     while True:
         c, a = sock.accept()
+        c.send(bytes('HTTP/1.1 200 OK', 'utf-8'))
         cThread = threading.Thread(target=handler, args=(c, a, bot))
         cThread.daemon = True
         cThread.start()
