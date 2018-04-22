@@ -95,6 +95,7 @@ def main():
         while True:
             try:
                 data = c.recv(1024)
+                print(data)
                 if data:
                     data_str = str(data, 'utf-8')
 
