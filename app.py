@@ -136,6 +136,7 @@ def main():
                             api_url = urljoin(
                                 base_url, '/v3/conversations/' + conversation_id + '/activities/' + reply_to_id)
                             requests.post(api_url, data=body_json, headers={
+                                          'Authorization': 'Bearer',
                                           'Content-Type': 'application/json'})
                             # c.send(bytes('HTTP/1.1 200 OK', 'utf-8'))
                             # print('sending body...', bytes(body_json, 'utf-8'))
