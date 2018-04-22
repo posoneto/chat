@@ -81,14 +81,14 @@ class DialogueManager(object):
 
         # Recognize intent of the question using `intent_recognizer`.
         # Don't forget to prepare question and calculate features for the question.
-
+        print('estoy generando la respuesta...')
         #### YOUR CODE HERE ####
         prepared_question = text_prepare(question)
         #### YOUR CODE HERE ####
         features = self.tfidf_vectorizer.transform([prepared_question])
         #### YOUR CODE HERE ####
         intent = self.intent_recognizer.predict(features)
-        print('estoy generando la respuesta...')
+        
         # Chit-chat part:   
         if intent == 'dialogue':
             # Pass question to chitchat_bot to generate a response.
