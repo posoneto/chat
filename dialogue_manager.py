@@ -88,12 +88,13 @@ class DialogueManager(object):
         features = self.tfidf_vectorizer.transform([prepared_question])
         #### YOUR CODE HERE ####
         intent = self.intent_recognizer.predict(features)
-
+        print('estoy generando la respuesta...')
         # Chit-chat part:   
         if intent == 'dialogue':
             # Pass question to chitchat_bot to generate a response.
             #### YOUR CODE HERE ####
             response = self.chatbot.get_response(question)
+            print('dialogue ->', response.text)
             return response.text
 
         # Goal-oriented part:
@@ -105,5 +106,5 @@ class DialogueManager(object):
             # Pass prepared_question to thread_ranker to get predictions.
             #### YOUR CODE HERE ####
             thread_id = self.thread_ranker.get_best_thread(prepared_question, tag)
-
+            print('programming ->', thread_id)
             return self.ANSWER_TEMPLATE % (tag, thread_id)

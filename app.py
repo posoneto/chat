@@ -27,6 +27,7 @@ class BotHandler(object):
         self.dialogue_manager = dialogue_manager
 
     def get_answer(self, question):
+        print('estoy en -> bot.get_answer()')
         if question == '/start':
             return "Hi, I am your project bot. How can I help you today?"
         return self.dialogue_manager.generate_answer(question)
