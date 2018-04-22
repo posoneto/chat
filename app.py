@@ -42,8 +42,8 @@ def main():
     dialogue_manager.create_chitchat_bot()
     print("Ready to talk!")
 
-    host = socket.gethostname() # Get local machine name # "http://chat-chat.1d35.starter-us-east-1.openshiftapps.com"
-    port = 3979
+    host = '' #socket.gethostname() # Get local machine name # "http://chat-chat.1d35.starter-us-east-1.openshiftapps.com"
+    port = 4040
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.bind((host, port))
@@ -127,7 +127,7 @@ def main():
                                 base_url, '/v3/conversations/' + conversation_id + '/activities/' + reply_to_id)
                             requests.post(api_url, data=body_json, headers={
                                           'Content-Type': 'application/json'})
-                            # c.send(bytes('HTTP/1.0 200 OK', 'utf-8'))
+                            # c.send(bytes('HTTP/1.1 200 OK', 'utf-8'))
                             # print('sending body...', bytes(body_json, 'utf-8'))
                             # c.send(bytes(body_json, 'utf-8'))
                             # finally:
@@ -144,13 +144,13 @@ def main():
 
         c.close()
 
-    # while True:
-    #     c, a = sock.accept()
-    #     cThread = threading.Thread(target=handler, args=(c, a, bot))
-    #     cThread.daemon = True
-    #     cThread.start()
-    #     print('connection: ', c)
-    #     print('argument: ', a)
+    while True:
+        c, a = sock.accept()
+        cThread = threading.Thread(target=handler, args=(c, a, bot))
+        cThread.daemon = True
+        cThread.start()
+        print('connection: ', c)
+        print('argument: ', a)
 
 
 if __name__ == "__main__":
