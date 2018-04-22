@@ -24,7 +24,7 @@ RESOURCE_PATH = {
 
 def text_prepare(text):
     """Performs tokenizing and simple prepossessing."""
-
+    print('estoy en merisimo text_prepare()', text)
     replace_by_space_re = re.compile('[/(){}\[\]\|@,;]')
     good_symbols_re = re.compile('[^0-9a-z #+_]')
     stopwords_set = set(stopwords.words('english'))
@@ -33,7 +33,7 @@ def text_prepare(text):
     text = replace_by_space_re.sub(' ', text)
     text = good_symbols_re.sub('', text)
     text = ' '.join([x for x in text.split() if x and x not in stopwords_set])
-
+    print('ya calcule el text', text)
     return text.strip()
 
 
