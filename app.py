@@ -107,7 +107,11 @@ def main():
                         print('voy a -> parse_data()')
                         question, from_id, conversation_id, recipient_id, reply_to_id = parse_data(
                             request_body)
+                        print('regrese de -> parse_data()')
+                        print('question ->', question)
+                        print('voy a -> bot.get_answer()')
                         text = bot.get_answer(question)
+                        print('ya regrese de -> bot.get_answer()')
                         print('text ->', text)
                         if text == '':
                             text = "Hmm, you are sending some weird characters to me..."
