@@ -72,9 +72,9 @@ class DialogueManager(object):
 
         # Training chatbot
 
-        # self.chatbot.set_trainer(ChatterBotCorpusTrainer)
+        self.chatbot.set_trainer(ChatterBotCorpusTrainer)
         
-        # self.chatbot.train("chatterbot.corpus.english")
+        self.chatbot.train("chatterbot.corpus.english")
 
     def generate_answer(self, question):
         """Combines stackoverflow and chitchat parts using intent recognition."""

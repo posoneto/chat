@@ -110,7 +110,8 @@ def main():
                         print('regrese de -> parse_data()')
                         print('question ->', question)
                         print('voy a -> bot.get_answer()')
-                        text = bot.get_answer(question)
+                        #text = bot.get_answer(question)
+                        text = 'respuesta de prueba'
                         print('ya regrese de -> bot.get_answer()')
                         print('text ->', text)
                         if text == '':
