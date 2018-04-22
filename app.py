@@ -30,7 +30,9 @@ class BotHandler(object):
         print('estoy en -> bot.get_answer()')
         if question == '/start':
             return "Hi, I am your project bot. How can I help you today?"
-        return self.dialogue_manager.generate_answer(question)
+        resp = self.dialogue_manager.generate_answer(question)
+        print('ya genere la respuesta ->', resp)
+        return resp
 
 
 def main():
