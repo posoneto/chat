@@ -83,11 +83,17 @@ class DialogueManager(object):
         # Don't forget to prepare question and calculate features for the question.
         print('estoy generando la respuesta...')
         #### YOUR CODE HERE ####
+        print('entro en -> text_prepare()')
         prepared_question = text_prepare(question)
+        print('salgo de -> text_prepare()')
         #### YOUR CODE HERE ####
+        print('entro en -> features')
         features = self.tfidf_vectorizer.transform([prepared_question])
+        print('salgo de -> features')
         #### YOUR CODE HERE ####
+        print('entro en -> intent')
         intent = self.intent_recognizer.predict(features)
+        print('salgo de -> intent')
         
         # Chit-chat part:   
         if intent == 'dialogue':
