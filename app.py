@@ -102,12 +102,12 @@ def main():
                     (request_header, request_body) = data_str.split("\r\n\r\n")
                     request_body = json.loads(request_body)
                     request_type = request_body.get('type', '')
-
+                    print('request type', request_type)
                     if request_type == 'message':
                         question, from_id, conversation_id, recipient_id, reply_to_id = parse_data(
                             request_body)
                         text = bot.get_answer(question)
-
+                        print('text', text)
                         if text == '':
                             text = "Hmm, you are sending some weird characters to me..."
 
