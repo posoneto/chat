@@ -42,8 +42,8 @@ def main():
     dialogue_manager.create_chitchat_bot()
     print("Ready to talk!")
 
-    host = '' #socket.gethostname() # Get local machine name # "http://chat-chat.1d35.starter-us-east-1.openshiftapps.com"
-    port = 4040
+    host = '' # Get local machine name # "http://chat-chat.1d35.starter-us-east-1.openshiftapps.com"
+    port = 8080
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.bind((host, port))
